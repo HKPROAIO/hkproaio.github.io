@@ -7,216 +7,273 @@
 <meta name="description" content="Portfolio of Husnain Khursheed, IT and network support professional in enterprise IT operations, Pakistan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f2f5f7; --surface:#ffffff; --ink:#14202b; --muted:#53626f; --line:#d6dee5;
-  --accent:#0a6a96; --accent-ink:#ffffff; --ok:#1f7a4d; --ok-bg:#dff3e8;
-  --wip:#8a5a00; --wip-bg:#fbefd2;
-  --head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
-  --body:"Instrument Sans","Segoe UI",Arial,sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0f1a23; --surface:#16242f; --ink:#e8eef3; --muted:#9db0bf; --line:#2a3b49;
-    --accent:#5cb8e4; --accent-ink:#06202e; --ok:#6fdca2; --ok-bg:#16382a;
-    --wip:#f0c36a; --wip-bg:#3a2e12;
-  }
+  --bg:#ffffff; --alt:#f4f6fb; --card:#ffffff; --ink:#0f172a; --muted:#5b6578; --line:#e3e8f0;
+  --accent:#4338ca; --accent-ink:#ffffff; --soft:#eef0ff;
+  --ok:#16a34a;
+  --font:"Plus Jakarta Sans","Segoe UI",Arial,sans-serif;
 }
 :root[data-theme="dark"]{
-  --bg:#0f1a23; --surface:#16242f; --ink:#e8eef3; --muted:#9db0bf; --line:#2a3b49;
-  --accent:#5cb8e4; --accent-ink:#06202e; --ok:#6fdca2; --ok-bg:#16382a;
-  --wip:#f0c36a; --wip-bg:#3a2e12;
+  --bg:#0b1220; --alt:#101a2c; --card:#141f33; --ink:#eaf0fa; --muted:#9aa9c0; --line:#243148;
+  --accent:#8b8cff; --accent-ink:#0b1220; --soft:#1b2748; --ok:#4ade80;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:1rem;line-height:1.65}
 a{color:var(--accent)}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
-.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.25rem}
 
-header.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
-.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.75rem;padding-bottom:.75rem}
-.brand{font-family:var(--head);font-weight:800;font-size:1.15rem;color:var(--ink);text-decoration:none}
-nav{display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center}
-nav a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem}
-nav a:hover{color:var(--ink)}
-#theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:.3rem .8rem;font:inherit;font-size:.85rem;cursor:pointer}
-
-.hero{padding:3.5rem 0 3rem;display:grid;gap:2.25rem;grid-template-columns:1fr}
-@media(min-width:56rem){.hero{grid-template-columns:1.15fr .85fr;align-items:center;padding:5rem 0 4rem}}
-h1{font-family:var(--head);font-weight:800;font-size:clamp(2.4rem,7vw,4.2rem);line-height:1.02;margin:0 0 1rem;letter-spacing:-.02em}
-.lede{font-size:1.2rem;color:var(--muted);max-width:34rem;margin:0 0 1.5rem}
-.actions{display:flex;gap:.75rem;flex-wrap:wrap}
-.btn{display:inline-block;padding:.75rem 1.2rem;border-radius:.6rem;font-weight:600;text-decoration:none;border:1px solid var(--accent)}
+/* Header */
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:3.75rem}
+.brand{font-weight:800;font-size:1.1rem;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.brand b{color:var(--accent)}
+.menu{display:none;gap:1.6rem;align-items:center}
+.menu a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.93rem}
+.menu a:hover{color:var(--ink)}
+.right{display:flex;gap:.6rem;align-items:center}
+.btn{display:inline-block;padding:.6rem 1.1rem;border-radius:.6rem;font-weight:700;font-size:.93rem;text-decoration:none;border:1px solid var(--accent);cursor:pointer;font-family:inherit}
 .btn.primary{background:var(--accent);color:var(--accent-ink)}
 .btn.ghost{background:transparent;color:var(--accent)}
+.icon{width:2.3rem;height:2.3rem;border-radius:.6rem;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:1rem;display:grid;place-items:center;font-family:inherit}
+.mobile{display:none;border-bottom:1px solid var(--line);background:var(--bg)}
+.mobile.open{display:block}
+.mobile a{display:block;padding:.8rem 1.25rem;color:var(--ink);text-decoration:none;font-weight:600;border-top:1px solid var(--line)}
+@media(min-width:48rem){.menu{display:flex}.icon.burger{display:none}.mobile,.mobile.open{display:none}}
+@media(max-width:47.99rem){.hire{display:none}}
 
-.ticket{background:var(--surface);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem 1.25rem 1rem}
-.ticket-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.9rem;color:var(--muted);font-size:.9rem}
-.status{font-weight:600;padding:.2rem .7rem;border-radius:999px;background:var(--wip-bg);color:var(--wip);transition:background .5s,color .5s}
-.ticket.done .status{background:var(--ok-bg);color:var(--ok)}
-.ticket h2{font-family:var(--head);font-size:1.25rem;margin:0 0 .9rem;line-height:1.25}
-.ticket dl{margin:0;display:grid;grid-template-columns:1fr auto;row-gap:.55rem;border-top:1px solid var(--line);padding-top:.8rem}
-.ticket dt{color:var(--muted)}
-.ticket dd{margin:0;font-weight:600;text-align:right}
+/* Hero */
+.hero{padding:2.5rem 0 3rem;display:grid;gap:2.25rem;align-items:center}
+@media(min-width:56rem){.hero{grid-template-columns:1.1fr .9fr;padding:4.5rem 0 5rem;gap:3rem}}
+.badge{display:inline-flex;align-items:center;gap:.5rem;padding:.3rem .85rem;border:1px solid var(--line);border-radius:999px;background:var(--card);font-size:.85rem;font-weight:600;color:var(--muted)}
+.dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--ok)}
+h1{font-size:clamp(2.1rem,7vw,3.5rem);line-height:1.08;letter-spacing:-.03em;margin:1rem 0 .9rem;font-weight:800}
+h1 span{color:var(--accent)}
+.lede{color:var(--muted);font-size:1.08rem;max-width:34rem;margin:0 0 1.5rem}
+.actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:2rem}
+.stats{display:flex;gap:2rem;flex-wrap:wrap}
+.stats strong{display:block;font-size:1.7rem;line-height:1.1;font-weight:800}
+.stats span{color:var(--muted);font-size:.88rem}
+.photo{position:relative;max-width:22rem;margin:0 auto;width:100%}
+.frame{aspect-ratio:1/1.1;border-radius:1.5rem;background:linear-gradient(145deg,var(--soft),var(--alt));border:1px solid var(--line);overflow:hidden;display:grid;place-items:center}
+.frame img{width:100%;height:100%;object-fit:cover}
+.initials{display:none;font-size:5rem;font-weight:800;color:var(--accent);letter-spacing:-.04em}
+.tag{position:absolute;left:-.5rem;bottom:1.2rem;background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:.55rem .9rem;font-size:.85rem;font-weight:700;box-shadow:0 8px 20px rgba(15,23,42,.12)}
+.tag small{display:block;color:var(--muted);font-weight:500}
 
-section{padding:3rem 0;border-top:1px solid var(--line)}
-h2.sec{font-family:var(--head);font-size:clamp(1.6rem,4vw,2.2rem);margin:0 0 1.25rem;letter-spacing:-.01em}
-.prose{max-width:42rem}
-.prose p{margin:0 0 1rem}
+/* Sections */
+section.s{padding:3.5rem 0}
+section.alt{background:var(--alt)}
+.lab{color:var(--accent);font-weight:700;font-size:.9rem;margin:0 0 .35rem}
+h2{font-size:clamp(1.6rem,4.5vw,2.3rem);letter-spacing:-.02em;line-height:1.15;margin:0 0 .6rem;font-weight:800}
+.sub{color:var(--muted);max-width:36rem;margin:0 0 2rem}
 
-.skills{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
-.skills h3{font-family:var(--head);margin:0 0 .5rem;font-size:1.1rem}
-.skills ul{margin:0;padding-left:1.1rem;color:var(--muted)}
-.skills li{margin:.2rem 0}
+.grid3{display:grid;gap:1rem}
+@media(min-width:48rem){.grid3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.4rem}
+.card .ic{width:2.6rem;height:2.6rem;border-radius:.7rem;background:var(--soft);color:var(--accent);display:grid;place-items:center;font-weight:800;margin-bottom:.9rem}
+.card h3{margin:0 0 .4rem;font-size:1.1rem}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
 
-.work{display:grid;gap:0}
-.work article{display:grid;gap:.4rem 2rem;padding:1.4rem 0;border-bottom:1px solid var(--line);grid-template-columns:1fr}
-@media(min-width:48rem){.work article{grid-template-columns:14rem 1fr}}
-.work h3{font-family:var(--head);margin:0;font-size:1.2rem}
-.work .tools{color:var(--muted);font-size:.92rem}
-.work p{margin:0}
+.projects{display:grid;gap:1.1rem}
+@media(min-width:48rem){.projects{grid-template-columns:repeat(2,1fr)}}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:1rem;overflow:hidden;display:flex;flex-direction:column}
+.art{height:9rem;display:flex;align-items:flex-end;padding:1rem;color:#fff;font-weight:800;font-size:1.3rem;letter-spacing:-.01em}
+.a1{background:linear-gradient(135deg,#4338ca,#7c3aed)}
+.a2{background:linear-gradient(135deg,#0f766e,#14b8a6)}
+.a3{background:linear-gradient(135deg,#0369a1,#38bdf8)}
+.a4{background:linear-gradient(135deg,#b45309,#f59e0b)}
+.proj .body{padding:1.1rem 1.2rem 1.3rem}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.6rem}
+.tags span{background:var(--soft);color:var(--accent);border-radius:999px;padding:.12rem .65rem;font-size:.78rem;font-weight:700}
+.proj h3{margin:0 0 .35rem;font-size:1.1rem}
+.proj p{margin:0;color:var(--muted);font-size:.96rem}
 
-.certs{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
-.certs li{padding:.9rem 1.1rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:.4rem}
-.certs span{display:block;color:var(--muted);font-size:.92rem}
+.about{display:grid;gap:2rem}
+@media(min-width:56rem){.about{grid-template-columns:1fr 1fr;align-items:start}}
+.about p{color:var(--muted);margin:0 0 1rem}
+.stack{display:flex;gap:.45rem;flex-wrap:wrap;margin-top:.5rem}
+.stack span{border:1px solid var(--line);background:var(--card);border-radius:.6rem;padding:.3rem .75rem;font-size:.9rem;font-weight:600}
+.certs{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.certs li{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:.6rem;padding:.75rem 1rem;font-weight:700}
+.certs small{display:block;color:var(--muted);font-weight:500}
 
-.contact a.big{font-family:var(--head);font-size:clamp(1.2rem,4vw,1.8rem);font-weight:700;word-break:break-all}
-.contact p{margin:.4rem 0}
-footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.status{transition:none}}
+/* Contact */
+.contact{display:grid;gap:2rem}
+@media(min-width:56rem){.contact{grid-template-columns:.9fr 1.1fr}}
+.links{display:grid;gap:.5rem;margin-top:1rem}
+.links a{font-weight:700;word-break:break-all}
+form{display:grid;gap:.9rem;background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.3rem}
+label{display:grid;gap:.3rem;font-weight:600;font-size:.9rem}
+input,textarea{font:inherit;font-weight:400;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.65rem .8rem;width:100%}
+textarea{min-height:7rem;resize:vertical}
+footer{padding:1.6rem 0 2.4rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header class="bar">
+
+<header class="top">
   <div class="wrap">
-    <a class="brand" href="#top">Husnain Khursheed</a>
-    <nav aria-label="Main">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
+    <a class="brand" href="#hero">husnain<b>.</b></a>
+    <nav class="menu" aria-label="Main">
+      <a href="#services">Services</a>
       <a href="#work">Work</a>
-      <a href="#certifications">Certifications</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <button id="theme" type="button" aria-label="Switch between light and dark theme">Theme</button>
     </nav>
+    <div class="right">
+      <button class="icon" id="theme" type="button" aria-label="Switch light or dark theme">&#9680;</button>
+      <a class="btn primary hire" href="#contact">Hire me</a>
+      <button class="icon burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    </div>
   </div>
+  <nav class="mobile" id="mobile" aria-label="Mobile">
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<main id="top">
-  <div class="wrap">
+<main>
+  <div class="wrap" id="hero">
     <div class="hero">
       <div>
-        <h1>IT &amp; Network Support Executive</h1>
-        <p class="lede">I keep enterprise IT running: tickets answered inside SLA, servers deployed cleanly, and users back to work fast. Resident Engineer at Nestlé Kabir Wala Factory.</p>
+        <span class="badge"><i class="dot"></i>Resident Engineer at Nestlé</span>
+        <h1>Hi, I’m Husnain. I keep <span>enterprise IT</span> running.</h1>
+        <p class="lede">IT and network support professional. I resolve tickets inside SLA, deploy servers cleanly, and get users back to work fast.</p>
         <div class="actions">
-          <a class="btn primary" href="#work">See my work</a>
+          <a class="btn primary" href="#work">View my work</a>
           <a class="btn ghost" href="#contact">Get in touch</a>
         </div>
-      </div>
-
-      <aside class="ticket" id="ticket" aria-label="Summary of results">
-        <div class="ticket-head">
-          <span>Support queue summary</span>
-          <span class="status" id="status">In progress</span>
+        <div class="stats">
+          <div><strong>95%</strong><span>Tickets within SLA</span></div>
+          <div><strong>50%</strong><span>Faster incident response</span></div>
+          <div><strong>3+</strong><span>Years in enterprise IT</span></div>
         </div>
-        <h2>Keep every ticket inside its SLA</h2>
-        <dl>
-          <dt>Tickets resolved within SLA</dt><dd>95%</dd>
-          <dt>Incident response time</dt><dd>50% faster</dd>
-          <dt>Server configuration time</dt><dd>40% less</dd>
-          <dt>Enterprise IT experience</dt><dd>3+ years</dd>
-        </dl>
-      </aside>
+      </div>
+      <div class="photo">
+        <div class="frame">
+          <img src="profile.jpg" alt="Husnain Khursheed" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="initials" aria-hidden="true">HK</span>
+        </div>
+        <div class="tag">Khanewal, Pakistan<small>IT &amp; Network Support</small></div>
+      </div>
     </div>
   </div>
 
-  <div class="wrap">
-    <section id="about">
-      <h2 class="sec">About</h2>
-      <div class="prose">
-        <p>I’m an IT and network support professional based in Khanewal, Punjab. I hold a BS in Information Technology from NCBA&amp;E Multan Campus (2019–2024).</p>
-        <p>Day to day I manage the ticket queue, troubleshoot hardware, software and network issues, coordinate with vendors, and document fixes so the same problem doesn’t come back. I’m building toward senior engineer and team lead roles, with a focus on automation and service management.</p>
+  <section class="s alt" id="services">
+    <div class="wrap">
+      <p class="lab">What I do</p>
+      <h2>Services</h2>
+      <p class="sub">The day-to-day work that keeps a large site productive.</p>
+      <div class="grid3">
+        <div class="card"><div class="ic">1</div><h3>Incident and ticket management</h3><p>Monitor the queue in ServiceNow and Jira, resolve incidents inside SLA, and document fixes so problems don’t repeat.</p></div>
+        <div class="card"><div class="ic">2</div><h3>Infrastructure and network</h3><p>LAN/WAN, DHCP and DNS support, server installation, VPN and RDP access, plus BIOS and firmware diagnostics.</p></div>
+        <div class="card"><div class="ic">3</div><h3>End-user and enterprise support</h3><p>Windows 10/11 deployment, Active Directory, Microsoft 365, Teams, SAP asset tracking and OS update rollouts.</p></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="skills">
-      <h2 class="sec">Skills</h2>
-      <div class="skills">
-        <div>
-          <h3>Infrastructure and networking</h3>
-          <ul><li>LAN/WAN, DHCP, DNS</li><li>Server installation (HP ProLiant)</li><li>VPN and RDP remote access</li><li>BIOS and firmware diagnostics</li></ul>
-        </div>
-        <div>
-          <h3>End-user and enterprise support</h3>
-          <ul><li>Windows 10/11 deployment</li><li>Active Directory</li><li>Teams and Zoom troubleshooting</li><li>Outlook, Exchange, OneDrive</li></ul>
-        </div>
-        <div>
-          <h3>Service management and tools</h3>
-          <ul><li>ServiceNow and Jira ticketing</li><li>SAP asset tracking</li><li>IT asset and inventory management</li><li>Technical documentation</li></ul>
+  <section class="s" id="work">
+    <div class="wrap">
+      <p class="lab">Portfolio</p>
+      <h2>Selected work</h2>
+      <p class="sub">Enterprise rollouts and my own builds.</p>
+      <div class="projects">
+        <article class="proj"><div class="art a1">Enterprise IT operations</div>
+          <div class="body"><div class="tags"><span>ServiceNow</span><span>Kronos</span><span>Teams</span></div>
+          <h3>Nestlé Kabir Wala Factory</h3>
+          <p>Resolve incidents within SLA, support the Kronos time and attendance system, validate OS updates, and deploy Poly CCX 350 Teams desk phones across the site.</p></div></article>
+        <article class="proj"><div class="art a2">Server deployment</div>
+          <div class="body"><div class="tags"><span>HP ProLiant DL380 Gen10</span><span>DHCP</span></div>
+          <h3>New server rollout</h3>
+          <p>Installed a new server and integrated DHCP, cutting manual configuration time by 40%.</p></div></article>
+        <article class="proj"><div class="art a3">Intelli Parking</div>
+          <div class="body"><div class="tags"><span>Arduino</span><span>ESP32-CAM</span><span>Python</span></div>
+          <h3>Smart parking system</h3>
+          <p>Six IR sensors, two servo barriers and three ESP32-CAM modules, controlled with Python.</p></div></article>
+        <article class="proj"><div class="art a4">HKPro PC Tester</div>
+          <div class="body"><div class="tags"><span>Browser-based</span><span>Free</span></div>
+          <h3>Hardware test website</h3>
+          <p>Tests your keyboard, mouse and graphics card right in the browser. Coming soon.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="s alt" id="about">
+    <div class="wrap about">
+      <div>
+        <p class="lab">About me</p>
+        <h2>A bit about who I am</h2>
+        <p>I’m an IT and network support professional based in Khanewal, Punjab, with a BS in Information Technology from NCBA&amp;E Multan Campus (2019–2024).</p>
+        <p>I like work that is measurable: tickets closed inside SLA, response times cut, configurations automated. I’m building toward senior engineer and team lead roles, with a focus on automation and service management.</p>
+        <p><strong>Tools and platforms</strong></p>
+        <div class="stack"><span>Windows 10/11</span><span>Active Directory</span><span>Microsoft 365</span><span>ServiceNow</span><span>Jira</span><span>SAP</span><span>VPN / RDP</span><span>DHCP / DNS</span></div>
+      </div>
+      <div>
+        <p class="lab">Credentials</p>
+        <h2>Certifications</h2>
+        <ul class="certs">
+          <li>HP LIFE Foundation<small>Digital Business, Data Analytics, Agile Project Management (2025)</small></li>
+          <li>Government-approved IT Support Certification</li>
+          <li>Prompt Engineering</li>
+          <li>Generative AI Mastermind</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="s" id="contact">
+    <div class="wrap contact">
+      <div>
+        <p class="lab">Get in touch</p>
+        <h2>Let’s work together</h2>
+        <p class="sub">Open to IT support, infrastructure and service management roles. Send a message and I’ll reply by email.</p>
+        <div class="links">
+          <a href="mailto:husnain.khursheed@hotmail.com">husnain.khursheed@hotmail.com</a>
+          <a href="tel:+923060149849">+92 306 0149849 (phone and WhatsApp)</a>
         </div>
       </div>
-    </section>
-
-    <section id="work">
-      <h2 class="sec">Work</h2>
-      <div class="work">
-        <article>
-          <div><h3>Enterprise IT operations</h3><div class="tools">Nestlé Kabir Wala Factory, 2025 to present</div></div>
-          <p>Resolve incidents and service requests within SLA, support the Kronos time and attendance system, validate and release OS updates, and roll out Poly CCX 350 Teams desk phones across the site.</p>
-        </article>
-        <article>
-          <div><h3>Server deployment</h3><div class="tools">HP ProLiant DL380 Gen10, DHCP</div></div>
-          <p>Deployed a new server and integrated DHCP, which cut manual configuration time by 40%.</p>
-        </article>
-        <article>
-          <div><h3>Intelli Parking</h3><div class="tools">Arduino UNO, ESP32-CAM, Python</div></div>
-          <p>A smart parking system with 6 IR sensors, 2 servo barriers and 3 ESP32-CAM modules, controlled with Python.</p>
-        </article>
-        <article>
-          <div><h3>HKPro PC Tester</h3><div class="tools">Browser-based, no install</div></div>
-          <p>A free website that tests your keyboard, mouse and graphics card right in the browser. Coming soon.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="certifications">
-      <h2 class="sec">Certifications</h2>
-      <ul class="certs">
-        <li>HP LIFE Foundation<span>Digital Business, Data Analytics, Agile Project Management (2025)</span></li>
-        <li>Government-approved IT Support Certification</li>
-        <li>Prompt Engineering</li>
-        <li>Generative AI Mastermind</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="contact">
-      <h2 class="sec">Contact</h2>
-      <p><a class="big" href="mailto:husnain.khursheed@hotmail.com">husnain.khursheed@hotmail.com</a></p>
-      <p>Phone and WhatsApp: <a href="tel:+923060149849">+92 306 0149849</a></p>
-      <p>Khanewal, Punjab, Pakistan</p>
-    </section>
-  </div>
+      <form id="form">
+        <label>Name<input name="name" required autocomplete="name"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label>Subject<input name="subject"></label>
+        <label>Message<textarea name="message" required></textarea></label>
+        <button class="btn primary" type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer>
-  <div class="wrap">© <span id="year">2026</span> Husnain Khursheed</div>
+  <div class="wrap">© <span id="year">2026</span> Husnain Khursheed. All rights reserved.</div>
 </footer>
 
 <script>
 (function(){
-  var ticket=document.getElementById('ticket'), status=document.getElementById('status');
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function resolve(){ticket.classList.add('done');status.textContent='Resolved within SLA';}
-  if(reduce){resolve();}else{setTimeout(resolve,1400);}
-
+  var root=document.documentElement;
+  document.getElementById('theme').addEventListener('click',function(){
+    root.setAttribute('data-theme',root.getAttribute('data-theme')==='dark'?'light':'dark');
+  });
+  var burger=document.getElementById('burger'), mobile=document.getElementById('mobile');
+  burger.addEventListener('click',function(){
+    var open=mobile.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open);
+  });
+  mobile.addEventListener('click',function(e){if(e.target.tagName==='A'){mobile.classList.remove('open');burger.setAttribute('aria-expanded','false');}});
   document.getElementById('year').textContent=new Date().getFullYear();
-
-  var root=document.documentElement, btn=document.getElementById('theme');
-  var dark=window.matchMedia('(prefers-color-scheme: dark)').matches;
-  btn.addEventListener('click',function(){
-    dark=!dark;
-    root.setAttribute('data-theme',dark?'dark':'light');
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target;
+    var subject=f.subject.value||('Portfolio message from '+f.name.value);
+    var body='Name: '+f.name.value+'\nEmail: '+f.email.value+'\n\n'+f.message.value;
+    window.location.href='mailto:husnain.khursheed@hotmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
   });
 })();
 </script>
