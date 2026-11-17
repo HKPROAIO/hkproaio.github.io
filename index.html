@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Husnain Khursheed | IT &amp; Network Support Executive</title>
+<meta name="description" content="Portfolio of Husnain Khursheed, IT and network support professional in enterprise IT operations, Pakistan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f5f7; --surface:#ffffff; --ink:#14202b; --muted:#53626f; --line:#d6dee5;
+  --accent:#0a6a96; --accent-ink:#ffffff; --ok:#1f7a4d; --ok-bg:#dff3e8;
+  --wip:#8a5a00; --wip-bg:#fbefd2;
+  --head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"Instrument Sans","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1a23; --surface:#16242f; --ink:#e8eef3; --muted:#9db0bf; --line:#2a3b49;
+    --accent:#5cb8e4; --accent-ink:#06202e; --ok:#6fdca2; --ok-bg:#16382a;
+    --wip:#f0c36a; --wip-bg:#3a2e12;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1a23; --surface:#16242f; --ink:#e8eef3; --muted:#9db0bf; --line:#2a3b49;
+  --accent:#5cb8e4; --accent-ink:#06202e; --ok:#6fdca2; --ok-bg:#16382a;
+  --wip:#f0c36a; --wip-bg:#3a2e12;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+
+header.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.75rem;padding-bottom:.75rem}
+.brand{font-family:var(--head);font-weight:800;font-size:1.15rem;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:1.1rem;flex-wrap:wrap;align-items:center}
+nav a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+#theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:.3rem .8rem;font:inherit;font-size:.85rem;cursor:pointer}
+
+.hero{padding:3.5rem 0 3rem;display:grid;gap:2.25rem;grid-template-columns:1fr}
+@media(min-width:56rem){.hero{grid-template-columns:1.15fr .85fr;align-items:center;padding:5rem 0 4rem}}
+h1{font-family:var(--head);font-weight:800;font-size:clamp(2.4rem,7vw,4.2rem);line-height:1.02;margin:0 0 1rem;letter-spacing:-.02em}
+.lede{font-size:1.2rem;color:var(--muted);max-width:34rem;margin:0 0 1.5rem}
+.actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.75rem 1.2rem;border-radius:.6rem;font-weight:600;text-decoration:none;border:1px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--accent)}
+
+.ticket{background:var(--surface);border:1px solid var(--line);border-radius:.9rem;padding:1.25rem 1.25rem 1rem}
+.ticket-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.9rem;color:var(--muted);font-size:.9rem}
+.status{font-weight:600;padding:.2rem .7rem;border-radius:999px;background:var(--wip-bg);color:var(--wip);transition:background .5s,color .5s}
+.ticket.done .status{background:var(--ok-bg);color:var(--ok)}
+.ticket h2{font-family:var(--head);font-size:1.25rem;margin:0 0 .9rem;line-height:1.25}
+.ticket dl{margin:0;display:grid;grid-template-columns:1fr auto;row-gap:.55rem;border-top:1px solid var(--line);padding-top:.8rem}
+.ticket dt{color:var(--muted)}
+.ticket dd{margin:0;font-weight:600;text-align:right}
+
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2.sec{font-family:var(--head);font-size:clamp(1.6rem,4vw,2.2rem);margin:0 0 1.25rem;letter-spacing:-.01em}
+.prose{max-width:42rem}
+.prose p{margin:0 0 1rem}
+
+.skills{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.skills h3{font-family:var(--head);margin:0 0 .5rem;font-size:1.1rem}
+.skills ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+.skills li{margin:.2rem 0}
+
+.work{display:grid;gap:0}
+.work article{display:grid;gap:.4rem 2rem;padding:1.4rem 0;border-bottom:1px solid var(--line);grid-template-columns:1fr}
+@media(min-width:48rem){.work article{grid-template-columns:14rem 1fr}}
+.work h3{font-family:var(--head);margin:0;font-size:1.2rem}
+.work .tools{color:var(--muted);font-size:.92rem}
+.work p{margin:0}
+
+.certs{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
+.certs li{padding:.9rem 1.1rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:.4rem}
+.certs span{display:block;color:var(--muted);font-size:.92rem}
+
+.contact a.big{font-family:var(--head);font-size:clamp(1.2rem,4vw,1.8rem);font-weight:700;word-break:break-all}
+.contact p{margin:.4rem 0}
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.status{transition:none}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">Husnain Khursheed</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+      <button id="theme" type="button" aria-label="Switch between light and dark theme">Theme</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <h1>IT &amp; Network Support Executive</h1>
+        <p class="lede">I keep enterprise IT running: tickets answered inside SLA, servers deployed cleanly, and users back to work fast. Resident Engineer at Nestlé Kabir Wala Factory.</p>
+        <div class="actions">
+          <a class="btn primary" href="#work">See my work</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <aside class="ticket" id="ticket" aria-label="Summary of results">
+        <div class="ticket-head">
+          <span>Support queue summary</span>
+          <span class="status" id="status">In progress</span>
+        </div>
+        <h2>Keep every ticket inside its SLA</h2>
+        <dl>
+          <dt>Tickets resolved within SLA</dt><dd>95%</dd>
+          <dt>Incident response time</dt><dd>50% faster</dd>
+          <dt>Server configuration time</dt><dd>40% less</dd>
+          <dt>Enterprise IT experience</dt><dd>3+ years</dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section id="about">
+      <h2 class="sec">About</h2>
+      <div class="prose">
+        <p>I’m an IT and network support professional based in Khanewal, Punjab. I hold a BS in Information Technology from NCBA&amp;E Multan Campus (2019–2024).</p>
+        <p>Day to day I manage the ticket queue, troubleshoot hardware, software and network issues, coordinate with vendors, and document fixes so the same problem doesn’t come back. I’m building toward senior engineer and team lead roles, with a focus on automation and service management.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="sec">Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Infrastructure and networking</h3>
+          <ul><li>LAN/WAN, DHCP, DNS</li><li>Server installation (HP ProLiant)</li><li>VPN and RDP remote access</li><li>BIOS and firmware diagnostics</li></ul>
+        </div>
+        <div>
+          <h3>End-user and enterprise support</h3>
+          <ul><li>Windows 10/11 deployment</li><li>Active Directory</li><li>Teams and Zoom troubleshooting</li><li>Outlook, Exchange, OneDrive</li></ul>
+        </div>
+        <div>
+          <h3>Service management and tools</h3>
+          <ul><li>ServiceNow and Jira ticketing</li><li>SAP asset tracking</li><li>IT asset and inventory management</li><li>Technical documentation</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2 class="sec">Work</h2>
+      <div class="work">
+        <article>
+          <div><h3>Enterprise IT operations</h3><div class="tools">Nestlé Kabir Wala Factory, 2025 to present</div></div>
+          <p>Resolve incidents and service requests within SLA, support the Kronos time and attendance system, validate and release OS updates, and roll out Poly CCX 350 Teams desk phones across the site.</p>
+        </article>
+        <article>
+          <div><h3>Server deployment</h3><div class="tools">HP ProLiant DL380 Gen10, DHCP</div></div>
+          <p>Deployed a new server and integrated DHCP, which cut manual configuration time by 40%.</p>
+        </article>
+        <article>
+          <div><h3>Intelli Parking</h3><div class="tools">Arduino UNO, ESP32-CAM, Python</div></div>
+          <p>A smart parking system with 6 IR sensors, 2 servo barriers and 3 ESP32-CAM modules, controlled with Python.</p>
+        </article>
+        <article>
+          <div><h3>HKPro PC Tester</h3><div class="tools">Browser-based, no install</div></div>
+          <p>A free website that tests your keyboard, mouse and graphics card right in the browser. Coming soon.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2 class="sec">Certifications</h2>
+      <ul class="certs">
+        <li>HP LIFE Foundation<span>Digital Business, Data Analytics, Agile Project Management (2025)</span></li>
+        <li>Government-approved IT Support Certification</li>
+        <li>Prompt Engineering</li>
+        <li>Generative AI Mastermind</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="sec">Contact</h2>
+      <p><a class="big" href="mailto:husnain.khursheed@hotmail.com">husnain.khursheed@hotmail.com</a></p>
+      <p>Phone and WhatsApp: <a href="tel:+923060149849">+92 306 0149849</a></p>
+      <p>Khanewal, Punjab, Pakistan</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="year">2026</span> Husnain Khursheed</div>
+</footer>
+
+<script>
+(function(){
+  var ticket=document.getElementById('ticket'), status=document.getElementById('status');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function resolve(){ticket.classList.add('done');status.textContent='Resolved within SLA';}
+  if(reduce){resolve();}else{setTimeout(resolve,1400);}
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  var root=document.documentElement, btn=document.getElementById('theme');
+  var dark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+  btn.addEventListener('click',function(){
+    dark=!dark;
+    root.setAttribute('data-theme',dark?'dark':'light');
+  });
+})();
+</script>
+</body>
+</html>
